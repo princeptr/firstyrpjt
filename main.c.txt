@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main() {
+    int randomNumber=(rand()%100)+1;
+    int num_of_guessed =0;
+    int guessed;
+do{
+    printf("guess the no");
+    scanf("%d",&guessed);
+    num_of_guessed ++;
+    if(guessed > randomNumber){
+        printf("guess lower no");
+    }else{
+        printf("guess higher no");
+    }
+}while(guessed!=randomNumber);
+    printf("you guessed the no in %d guesses",num_of_guessed);
+        
+    
+ 
+    return 0;
+}
